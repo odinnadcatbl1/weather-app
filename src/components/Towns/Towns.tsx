@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useActions } from "../../hooks/useActios";
+import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import "./towns.scss";
 
@@ -28,6 +28,15 @@ const Towns: React.FC = () => {
             }
         }
     }, []);
+
+    useEffect(() => {
+        if (!towns.length) {
+            setActiveTown({
+                id: "",
+                name: "",
+            });
+        }
+    }, [towns]);
 
     return (
         <div className="towns">

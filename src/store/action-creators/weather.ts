@@ -4,7 +4,6 @@ import { WeatherAction, WeatherActionTypes, List } from "../../types/types";
 import { Response } from "../../types/types";
 
 export const fetchWeather = (city: string) => {
-    console.log("fetch");
     return async (dispatch: Dispatch<WeatherAction>) => {
         try {
             dispatch({ type: WeatherActionTypes.FETCH_WEATHER_REQUEST });

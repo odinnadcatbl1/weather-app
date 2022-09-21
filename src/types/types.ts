@@ -89,3 +89,8 @@ export type TownsAction =
     | AddTownAction
     | DeleteDownAction
     | SetActiveTownAction;
+
+export interface IGraphData {
+    temp: number;
+    date: string;
+}

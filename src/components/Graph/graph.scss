@@ -1,0 +1,15 @@
+.graph {
+    width: 50%;
+}
+
+.graph__info {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: lightcoral;
+
+    &--loading {
+        color: green;
+    }
+}

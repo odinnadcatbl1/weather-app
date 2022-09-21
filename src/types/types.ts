@@ -61,16 +61,18 @@ export interface Town {
 
 export interface TownsState {
     towns: Town[];
+    activeTown: Town;
 }
 
 export enum TownsActionTypes {
     ADD_TOWN = "ADD_TOWN",
     DELETE_TOWN = "DELETE_TOWN",
+    SET_ACTIVE_TOWN = "SET_ACTIVE_TOWN",
 }
 
 interface AddTownAction {
     type: TownsActionTypes.ADD_TOWN;
-    payload: string;
+    payload: Town;
 }
 
 interface DeleteDownAction {
@@ -78,4 +80,12 @@ interface DeleteDownAction {
     payload: string;
 }
 
-export type TownsAction = AddTownAction | DeleteDownAction;
+interface SetActiveTownAction {
+    type: TownsActionTypes.SET_ACTIVE_TOWN;
+    payload: Town;
+}
+
+export type TownsAction =
+    | AddTownAction
+    | DeleteDownAction
+    | SetActiveTownAction;

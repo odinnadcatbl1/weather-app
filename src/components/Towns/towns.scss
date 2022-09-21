@@ -1,0 +1,36 @@
+.towns__input {
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.towns__list {
+    list-style: none;
+}
+
+.towns__button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &--add {
+        background-color: lightgreen;
+    }
+
+    &--delete {
+        background-color: lightcoral;
+    }
+
+    &--active {
+        background-color: lightblue;
+    }
+}

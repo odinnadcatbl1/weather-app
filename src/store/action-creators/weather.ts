@@ -23,10 +23,3 @@ export const fetchWeather = (city: string) => {
         }
     };
 };
-
-// export const deleteRow = (id: number) => {
-//     return {
-//         type: DataActionTypes.DELETE_ROW,
-//         payload: id,
-//     };
-// };

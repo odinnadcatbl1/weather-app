@@ -1,11 +1,11 @@
 import {
     List,
-    DataState,
+    WeatherState,
     WeatherAction,
     WeatherActionTypes,
 } from "../../types/types";
 
-const initialState: DataState = {
+const initialState: WeatherState = {
     data: [],
     loading: true,
     error: "",

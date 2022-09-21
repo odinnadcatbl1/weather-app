@@ -23,7 +23,7 @@ export interface Response {
     message: number;
 }
 
-export interface DataState {
+export interface WeatherState {
     data: List[];
     error: string;
     loading: boolean;
@@ -53,3 +53,29 @@ export type WeatherAction =
     | RequestFetchAction
     | SuccessFetchAction
     | FailureFetchAction;
+
+export interface Town {
+    name: string;
+    id: string;
+}
+
+export interface TownsState {
+    towns: Town[];
+}
+
+export enum TownsActionTypes {
+    ADD_TOWN = "ADD_TOWN",
+    DELETE_TOWN = "DELETE_TOWN",
+}
+
+interface AddTownAction {
+    type: TownsActionTypes.ADD_TOWN;
+    payload: string;
+}
+
+interface DeleteDownAction {
+    type: TownsActionTypes.DELETE_TOWN;
+    payload: string;
+}
+
+export type TownsAction = AddTownAction | DeleteDownAction;

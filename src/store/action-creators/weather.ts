@@ -8,7 +8,7 @@ export const fetchWeather = (city: string) => {
         try {
             dispatch({ type: WeatherActionTypes.FETCH_WEATHER_REQUEST });
             const response = await axios.get<Response>(
-                `http://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=c7b03e89eab41acf7d059b9ea7250e65`
+                `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=c7b03e89eab41acf7d059b9ea7250e65`
             );
             dispatch({
                 type: WeatherActionTypes.FETCH_WEATHER_SUCCESS,

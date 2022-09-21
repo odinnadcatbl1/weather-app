@@ -18,12 +18,14 @@ export const weatherReducer = (state = initialState, action: WeatherAction) => {
                 ...state,
                 data: action.payload,
                 loading: false,
+                error: "",
             };
 
         case WeatherActionTypes.FETCH_WEATHER_REQUEST:
             return {
                 ...state,
                 loading: true,
+                error: "",
             };
 
         case WeatherActionTypes.FETCH_WEATHER_FAILURE:
